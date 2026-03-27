@@ -1,16 +1,14 @@
-#  CloudMed Solutions – Zero Trust Azure Landing Zone
-
+##  CST8913 – Cloud Migration - Lab 10 – Zero Trust Landing Zone
 
 ---
 
 
-* **Course:** CST8913 – Cloud Migration
 * **Lab:** Lab 10 – Zero Trust Landing Zone
-* **Student:** 
+* **Student:**   Hesheng Yang
 
 ---
 
-#  1. Company Overview
+##  1. Company Overview
 
 CloudMed Solutions Inc. is a healthcare technology company that provides cloud-based telemedicine and patient management platforms across Canada, the United States, and Europe.
 
@@ -34,7 +32,7 @@ Because CloudMed handles sensitive healthcare data, it must comply with HIPAA, G
 
 ---
 
-#  2. Governance and Identity
+##  2. Governance and Identity
 
 CloudMed uses a structured governance model to control access and ensure compliance.
 
@@ -83,7 +81,7 @@ Root
 
 ---
 
-#  3. Network Architecture
+##  3. Network Architecture
 
 CloudMed uses a Hub-and-Spoke architecture to improve security and isolation.
 
@@ -97,7 +95,7 @@ Traffic between networks is controlled through the firewall, private endpoints a
 This design supports Zero Trust by limiting communication and reducing attack spread.
 
 
-##  Hub-and-Spoke Model
+###  Hub-and-Spoke Model
 
 * Hub → Security services
 * Spokes → Workloads
@@ -123,21 +121,21 @@ This design supports Zero Trust by limiting communication and reducing attack sp
 
 ---
 
-#  4. Zero Trust Controls
+##  4. Zero Trust Controls
 
 
 CloudMed applies the three Zero Trust principles:
 
 Verify Explicitly:
 Use MFA, identity authentication, and Conditional Access for every request.
-##  Verify Explicitly
+###  Verify Explicitly
 
 * MFA
 * Conditional access
 
 Least Privilege Access:
 Users only get minimum permissions, and admin access is temporary (JIT).
-##  Least Privilege
+###  Least Privilege
 
 * Minimal RBAC
 * JIT access
@@ -145,7 +143,7 @@ Users only get minimum permissions, and admin access is temporary (JIT).
 Assume Breach:
 Networks are segmented, data is encrypted, and all activity is logged and monitored.
 
-##  Assume Breach
+###  Assume Breach
 
 * Segmentation
 * Encryption
@@ -162,16 +160,16 @@ Examples:
 
 ---
 
-#  5. Monitoring, Compliance, and Cost (Brief)
-##  Monitoring:
+##  5. Monitoring, Compliance, and Cost (Brief)
+###  Monitoring:
 Azure Monitor and Log Analytics collect logs and detect issues.
-##  Compliance:
+###  Compliance:
 Azure Policy and Defender for Cloud ensure security rules are followed.
-##  Cost Control:
+###  Cost Control:
 Budgets, alerts, and resource tags help track and manage spending.
 
 
-#  6. Architecture Diagram
+##  6. Architecture Diagram
 
 ```mermaid
 flowchart TB
@@ -214,25 +212,28 @@ Backend --> SQL
 
 ---
 
-# 🧾 7. Summary
+##  7. Summary
 
-This architecture provides:
+This Zero Trust landing zone design architecture ensures:
 
-* Strong Zero Trust security
-* Compliance
-* Scalability
-* Cost control
+*  Strong security through identity verification
+*  Compliance with healthcare regulations
+*  Scalable and modular architecture
+*  Controlled access and reduced risk
 
 ---
 
 ##  Recommendations
 
-1. Use Bicep/Terraform
-2. Enable autoscaling
-
 ---
 
-#  References (APA)
+###  Automation:
+Use Bicep or Terraform to standardize deployments.
+###  Cost Optimization:
+Enable autoscaling and monitor unused resources to reduce cost.
+
+
+##  References (APA)
 
 Microsoft. (2023). What is an Azure landing zone?
 https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
