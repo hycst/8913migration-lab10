@@ -223,15 +223,12 @@ This Zero Trust landing zone design architecture ensures:
 
 ---
 
-##  Recommendations
-
----
-
+##  8. Recommendations
 ###  Automation:
 Use Bicep or Terraform to standardize deployments.
 ###  Cost Optimization:
 Enable autoscaling and monitor unused resources to reduce cost.
-
+---
 
 ##  References (APA)
 
