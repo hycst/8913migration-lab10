@@ -125,26 +125,25 @@ This design supports Zero Trust by limiting communication and reducing attack sp
 
 #  4. Zero Trust Controls
 
+
 CloudMed applies the three Zero Trust principles:
 
 Verify Explicitly:
 Use MFA, identity authentication, and Conditional Access for every request.
-Least Privilege Access:
-Users only get minimum permissions, and admin access is temporary (JIT).
-Assume Breach:
-Networks are segmented, data is encrypted, and all activity is logged and monitored.
-
-
-
 ##  Verify Explicitly
 
 * MFA
 * Conditional access
 
+Least Privilege Access:
+Users only get minimum permissions, and admin access is temporary (JIT).
 ##  Least Privilege
 
 * Minimal RBAC
 * JIT access
+
+Assume Breach:
+Networks are segmented, data is encrypted, and all activity is logged and monitored.
 
 ##  Assume Breach
 
@@ -152,15 +151,27 @@ Networks are segmented, data is encrypted, and all activity is logged and monito
 * Encryption
 * Monitoring
 
-###  Examples Cost
+Examples:
 
-* Budgets
-* Tags
-* Alerts
+*  Bastion for secure admin access
+*  Private Link for SQL
+*  Policy to block public IPs
+*  Firewall for traffic control
+*  Defender for threat detection
+
 
 ---
 
-# 🧱 6. Architecture Diagram
+#  5. Monitoring, Compliance, and Cost (Brief)
+##  Monitoring:
+Azure Monitor and Log Analytics collect logs and detect issues.
+##  Compliance:
+Azure Policy and Defender for Cloud ensure security rules are followed.
+##  Cost Control:
+Budgets, alerts, and resource tags help track and manage spending.
+
+
+#  6. Architecture Diagram
 
 ```mermaid
 flowchart TB
@@ -214,14 +225,14 @@ This architecture provides:
 
 ---
 
-## 🚀 Recommendations
+##  Recommendations
 
 1. Use Bicep/Terraform
 2. Enable autoscaling
 
 ---
 
-# 📚 References (APA)
+#  References (APA)
 
 Microsoft. (2023). What is an Azure landing zone?
 https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
@@ -239,10 +250,3 @@ Microsoft. (2023). Defender for Cloud overview.
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/
 
 ---
-
-# ✅ Checklist
-
-* [x] All sections completed
-* [x] Diagram included
-* [x] Zero Trust applied
-* [x] APA references
